@@ -20,12 +20,15 @@ type bike struct {
 	make  string
 }
 
+//values array
 type Values struct {
-	Models []Model
+	Models []Model `json:"values"`
 }
+
+// model array
 type Model struct {
-	Name     string
-	Feedback []string
+	Name     string   `json:"model"`
+	Feedback []string `json:"feedback"`
 }
 type feedbackResult struct {
 	feedbackTotal    int
@@ -37,7 +40,7 @@ type comment struct {
 }
 
 var vehicleResult map[string]feedbackResult
-var inventory vehicle
+var inventory []vehicle
 
 // Values array for the feedback.json file
 
